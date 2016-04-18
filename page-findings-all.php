@@ -77,50 +77,44 @@ $my_search = new WP_Advanced_Search($args);
                    <h1 class="page-title"><?php echo 'Findings' ;?></h1>
 
 
+                   <div class="archive-findings large-8 medium-8 columns">
+                   <?php
+
+                   $my_search = new WP_Advanced_Search($args);
+                   $temp_query = $wp_query;
+                   $wp_query = $my_search->query();?>
+
+                   <?php
+                   if ( have_posts() ):
+                       while ( have_posts() ): the_post(); ?>
+
+                   <?php get_template_part( 'partials/loop', 'findings-search' ); ?>
+
+                   <?php    endwhile;
+
+                   $my_search->pagination(array('prev_text' => '«','next_text' => '»'));
+
+                   endif;
+                   wp_reset_query();
+                   $wp_query = $temp_query;
+                   ?>
+
+                   </div>
+
+                   <div class="large-4 columns">
+                     <div id="search"  class="archive-findings columns">
+                         <h5>Filter</h5>
+                          <?php $my_search->the_form(); ?>
+                         <p>You can filter the findings by year, type, project or author. Alternatively, you can search for a keyword (which must appear in the title of the finding).</p>
+                     </div>
+                   </div>
 
 
-					<div id="search-results" class="large-12 medium-8 columns clearfix" role="main">
-                        <div class="large-6 medium-6 columns clearfix">
-
-                            <div id="search"  class="archive-findings columns">
-                                <h5>Filter</h5>
-                                 <?php $my_search->the_form(); ?>
-                                <p>You can filter the findings by year, type, project or author. Alternatively, you can search for a keyword (which must appear in the title of the finding).</p>
-                            </div>
-                        </div>
-
-						<?php
+                   				    </div> <!-- end #main -->
 
 
-$my_search = new WP_Advanced_Search($args);
-$temp_query = $wp_query;
-$wp_query = $my_search->query();?>
+                       			</div> <!-- end #inner-content -->
 
-<?php
-if ( have_posts() ):
-    while ( have_posts() ): the_post(); ?>
+                   			</div> <!-- end #content -->
 
-
-
-<?php get_template_part( 'partials/loop', 'findings-search' ); ?>
-
-<?php    endwhile;
-
-$my_search->pagination(array('prev_text' => '«','next_text' => '»'));
-
-endif;
-wp_reset_query();
-$wp_query = $temp_query;
-?>
-
-
-                      </div>
-
-				    </div> <!-- end #main -->
-
-
-    			</div> <!-- end #inner-content -->
-
-			</div> <!-- end #content -->
-
-<?php get_footer(); ?>
+                   <?php get_footer(); ?>

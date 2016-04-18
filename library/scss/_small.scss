@@ -278,14 +278,21 @@ li.findings-project {
 
 .archive-findings {
     margin-top: 1em;
-    box-shadow: 0px 1px 2px 0px #999;
     & h6 {
         text-transform: uppercase;
     }
-    &.columns article {
-        height: 550px;
+    & article {
+        height: auto;
+				border-bottom: 1px solid whitesmoke;
     }
+		a.button {
+			color: white !important;
+			&:hover {
+				background: #666 !important;
+			}
+		}
 }
+
 
 #related-findings {
     padding: 0;
