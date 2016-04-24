@@ -339,6 +339,18 @@ select {
 
 /* PAGINATION */
 
+.page-numbers:not(:last-child) {
+	background: whitesmoke;
+	width: 30px !important;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 50%;
+	font-weight: bold;
+}
+
 nav.wp-prev-next ul {
     list-style-type: none;
 }

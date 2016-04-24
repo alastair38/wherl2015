@@ -11,7 +11,7 @@ Template Name: Home
 
 				<div id="home-inner-content" class="clearfix">
 
-				    <div id="main" class="large-12 medium-12 columns" role="main">
+				    <div id="main" class="large-8 medium-8 small-12 columns" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
