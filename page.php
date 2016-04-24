@@ -11,7 +11,7 @@ Template Name: Home
 
 				<div id="home-inner-content" class="clearfix">
 
-				    <div id="main" class="large-8 medium-8 small-12 columns" role="main">
+				    <div id="main" class="large-12 medium-12 small-12 columns" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -182,7 +182,7 @@ echo get_the_post_thumbnail($blog->ID, 'full' );
 Follow @WHERLage
 </a></p>
 	    <a class="twitter-timeline" href="https://twitter.com/WHERLage" data-widget-id="614470817083191296" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets by @WHERLage</a>
-
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 	</div>
 
