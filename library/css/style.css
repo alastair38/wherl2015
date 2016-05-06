@@ -1040,20 +1040,23 @@ ul.findings-downloads {
 /*********************
 FINDINGS + SEARCH PAGE
 *********************/
-a.post-edit-link {
+#edit-link {
   display: block;
   text-align: center;
   border: 1px solid #2f8888;
   border-radius: 2px;
-  margin: 0 5px;
+  width: 30%;
+  margin-left: 35%;
   padding: 0 5px;
   transition: 350ms; }
 
-a.post-edit-link:hover,
-a.post-edit-link:focus {
+#edit-link:hover,
+#edit-link:focus {
   background: #2f8888 !important;
-  color: #fff !important;
   text-decoration: none !important; }
+  #edit-link:hover a,
+  #edit-link:focus a {
+    color: #fff !important; }
 
 #details h5 {
   text-transform: uppercase; }
@@ -1163,7 +1166,7 @@ select {
 /* PAGINATION */
 .page-numbers:not(:last-child) {
   background: whitesmoke;
-  width: 30px;
+  width: 30px !important;
   display: inline-block;
   height: 30px;
   line-height: 30px;
@@ -1192,6 +1195,9 @@ nav.wp-prev-next ul {
   text-transform: uppercase;
   text-align: center; }
 
+/*********************
+TWITTER WIDGET
+*********************/
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -1269,12 +1275,14 @@ COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
 #comments {
+  text-align: center;
   /* number of comments span */ }
 
 #respond ul {
   margin-left: 0px; }
 
 .commentlist {
+  margin: 1rem !important;
   /* general comment classes */
   /* vcard */
   /* end .commentlist .vcard */
@@ -1306,7 +1314,7 @@ COMMENT STYLES
     margin-left: 10px;
     margin-top: 0;
     padding-bottom: 0;
-    background: #e7e7e7; }
+    background: #fff; }
   .commentlist li.depth-3 {
     background: #dadada; }
   .commentlist .vcard {
@@ -1332,32 +1340,8 @@ COMMENT STYLES
     font-size: 1em;
     line-height: 1.5em; }
   .commentlist .comment-reply-link {
-    border-style: solid;
-    border-width: 0px;
-    cursor: pointer;
-    font-family: "Open Sans Condensed", Arial, sans-serif;
-    font-weight: normal;
-    line-height: normal;
-    margin: 0 0 1.25rem;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    display: inline-block;
-    padding-top: 0.875rem;
-    padding-right: 1.75rem;
-    padding-bottom: 0.9375rem;
-    padding-left: 1.75rem;
-    font-size: 0.8125rem;
-    background-color: #008CBA;
-    border-color: #007095;
-    color: #fff;
-    float: right; }
-    .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
-      background-color: #007095; }
-    .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
-      color: #fff; }
+    float: right;
+    padding: 1em; }
 
 /* end .commentlist */
 /******************************************************************
@@ -1472,11 +1456,11 @@ MEDIUM
 */
 @media only screen and (min-width: 40.063em) {
   /******************************************************************
-
+  
   Stylesheet: Mediun Stylesheet
-
+  
   Styles apply to 40.063em and up.
-
+  
   ******************************************************************/
   /*********************
   NAVIGATION STYLES
@@ -1531,11 +1515,11 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 64.063em) {
   /******************************************************************
-
+  
   Stylesheet: Large Stylesheet
-
+  
   Styles apply to 64.063em and up.
-
+  
   ******************************************************************/
   /*********************
   GENERAL STYLES
@@ -1600,23 +1584,23 @@ XLARGE
 */
 @media only screen and (min-width: 90.063em) {
   /******************************************************************
-
+  
   Stylesheet: X-Large Stylesheet
-
+  
   Styles apply to 90.063em and up.
-
-
+  
+  
   ******************************************************************/ }
 /*
 XXLARGE
 */
 @media only screen and (min-width: 120.063em) {
   /******************************************************************
-
+  
   Stylesheet: XX-Large Stylesheet
-
+  
   Styles apply to 120.063em and up.
-
+  
   ******************************************************************/ }
 h1, h2, h3, h4, h5, h6, * {
   font-family: 'Open Sans Condensed'; }
@@ -1716,17 +1700,18 @@ h1.title {
 .latest-blog,
 .latest-news {
   background: #fff;
-  min-height: 100px;
   margin-bottom: 1em;
   transition: 1s; }
 
 .latest-finding {
   padding: 2em;
+  min-height: 120px;
   text-align: center;
   text-transform: uppercase; }
 
 .latest-news {
   padding: 1em 2em;
+  min-height: 120px;
   text-align: center;
   text-transform: uppercase; }
 
@@ -2017,9 +2002,10 @@ article {
     font-weight: bold; }
 
 .blog-thumbnail {
-  margin: -3px 0 0 0;
+  margin: -1.2em 0 0 0;
   padding: 0px;
-  position: relative; }
+  position: relative;
+  height: 200px; }
 
 .blog-thumbnail-caption {
   position: absolute;
@@ -2084,13 +2070,6 @@ p.categories {
 .blog-content {
   line-height: 1.5em; }
 
-#edit-link {
-  display: inline-block;
-  width: 30%;
-  margin-left: 35%;
-  background: #f2f2f2;
-  text-align: center; }
-
 /* SIGN UP FORM */
 #sidebar1 {
   width: 100%;
@@ -2115,6 +2094,10 @@ form#mc4wp-form-1 h5 {
   text-transform: uppercase;
   text-align: center;
   background: #fff; }
+
+.mc4wp-form-fields a.twitter-follow-button {
+  color: #111 !important;
+  display: block; }
 
 /* SOCIAL ICONS + CONTACT */
 .twitter {
@@ -2330,7 +2313,7 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
     width: 50%; }
 
   /*
-
+  
       .postid-52 img.team-logo {
       width: 60px;
   }
@@ -2345,42 +2328,42 @@ query for retina AND a certain size if you want. Go Nuts.
   /******************************************************************
   Site Name:
   Author:
-
+  
   Stylesheet: Retina Screens & Devices Stylesheet
-
+  
   When handling retina screens you need to make adjustments, especially
   if you're not using font icons. Here you can add them in one neat
   place.
-
+  
   ******************************************************************/
   /*
-
+  
   EXAMPLE
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
   like this:
-
+  
   .icon {
   	width: 24px;
   	height: 24px;
   	background: url(img/test.png) no-repeat;
   }
-
+  
   For retina screens, we have to make some adjustments, so that image
   doesn't look blurry. So, taking into account the image above and the
   dimensions, this is what we would put in our retina stylesheet:
-
+  
   .icon {
   	background: url(img/test@2x.png) no-repeat;
   	background-size: 24px 24px;
   }
-
+  
   So, you would create the same icon, but at double the resolution, meaning
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
   the original dimensions and you are good to go.
-
+  
   */ }
 /*
 iPHONE 5 MEDIA QUERY
@@ -2416,13 +2399,13 @@ be set to display none.
 */
 @media print {
   /******************************************************************
-
+  
   Stylesheet: Print Stylesheet
-
+  
   This is the print stylesheet. There's probably not a lot
   of reasons to edit this stylesheet. If you want to
   though, go for it.
-
+  
   ******************************************************************/
   * {
     background: transparent !important;

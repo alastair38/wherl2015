@@ -212,19 +212,20 @@ overflow: hidden;
 .latest-blog,
 .latest-news {
     background: $content-bg;
-    min-height: $latest-height;
     margin-bottom: 1em;
     transition: 1s;
 }
 
 .latest-finding {
     padding: 2em;
+		min-height: 120px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .latest-news {
     padding: 1em 2em;
+		min-height: 120px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -584,9 +585,10 @@ article {
 }
 
 .blog-thumbnail {
-    margin: -3px 0 0 0;
+    margin: -1.2em 0 0 0;
     padding: 0px;
     position: relative;
+		height: 200px;
 }
 
 .blog-thumbnail-caption {
@@ -664,14 +666,6 @@ p.categories {
     line-height: 1.5em;
 }
 
-#edit-link {
-    display: inline-block;
-    width: 30%;
-    margin-left: 35%;
-    background: #f2f2f2;
-    text-align: center;
-}
-
 /* SIGN UP FORM */
 
 #sidebar1 {
@@ -702,6 +696,11 @@ form#mc4wp-form-1 h5 {
     text-transform: uppercase;
     text-align: center;
     background: #fff;
+}
+
+.mc4wp-form-fields a.twitter-follow-button {
+	color: #111 !important; 
+	display: block;
 }
 
 /* SOCIAL ICONS + CONTACT */

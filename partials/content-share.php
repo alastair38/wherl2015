@@ -6,7 +6,7 @@ $string = get_the_title();
 
 <ul class="share-links columns">
 
-    <li><a href="https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&via=&text=<?php the_title(); ?>" title="Share on Twitter" target="_blank"><i class="fi-social-twitter"></i></a></li>
+    <li><a href="https://twitter.com/intent/tweet?url=<?php echo wp_get_shortlink(); ?>&via=WHERLage&text=<?php the_title(); ?>" title="Share on Twitter" target="_blank"><i class="fi-social-twitter"></i></a></li>
 
     <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo wp_get_shortlink(); ?>&title=<?php the_title(); ?>&summary=<?php echo wp_filter_nohtml_kses( $content );?>&source=wherl.ac.uk" title="Share on Linkedin" target="_blank"><i class="fi-social-linkedin"></i></a></li>
 

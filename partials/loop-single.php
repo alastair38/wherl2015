@@ -1,18 +1,18 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<header class="article-header">
-	<div class="blog-thumbnail columns">
-        <?php if ( has_post_thumbnail() ) {
-the_post_thumbnail('full' );
-if(get_post(get_post_thumbnail_id())->post_excerpt) {
-				echo '<div class="blog-thumbnail-caption">Photo copyright: ' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
-}
-} else { ?>
-<img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
-<?php } ?>
 
+	<?php $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+	if ($image){
+	?>
 
-    </div>
+	<div class="blog-thumbnail columns" style="background: url('<?php echo $image;?>') no-repeat; background-size: cover; background-position: center center;">
+	</div>
+	<?php } else {?>
+	<div class="blog-thumbnail columns" style="background: url('<?php echo get_template_directory_uri(); ?>/library/images/featured.png') no-repeat; background-size: cover; background-position: center center;">
+
+	</div>
+	<?php }?>
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 
 

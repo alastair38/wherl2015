@@ -169,20 +169,18 @@ echo get_the_post_thumbnail($blog->ID, 'full' );
 				</div> <!-- end #inner-content -->
 
 
-	<div class="large-12 tweeting columns">
+	<div style="font-size: 16px;" class="large-12 tweeting columns">
 
 
 
 
     <h5>WHERL Tweets</h5>
-    <p><a class="twitter-follow-button"
-  href="https://twitter.com/WHERLage"
-  data-show-count="false"
-  data-lang="en">
-Follow @WHERLage
-</a></p>
-	    <a class="twitter-timeline" href="https://twitter.com/WHERLage" data-widget-id="614470817083191296" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets by @WHERLage</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <p>
+      <a href="https://twitter.com/WHERLage" class="twitter-follow-button" data-show-count="false">Follow @WHERLage</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
+
+<?php echo do_shortcode( '[statictweets skin="simplistic" resource="usertimeline" user="WHERLage" count="10" retweets="on" replies="on" show="username,screenname,avatar,time,actions,media"/]' );?>
 
 	</div>
 

@@ -186,21 +186,26 @@ ul.findings-downloads {
 FINDINGS + SEARCH PAGE
 *********************/
 
-a.post-edit-link {
+
+
+#edit-link {
     display: block;
     text-align: center;
     border: 1px solid $theme-color;
     border-radius: 2px;
-    margin: 0 5px;
+		width: 30%;
+    margin-left: 35%;
     padding: 0 5px;
     transition: 350ms;
 }
 
-a.post-edit-link:hover,
-a.post-edit-link:focus {
+#edit-link:hover,
+#edit-link:focus {
         background: $theme-color !important;
-        color: #fff !important;
         text-decoration: none !important;
+				a {
+					color: #fff !important;
+				}
     }
 
 #details h5 {
@@ -379,6 +384,12 @@ nav.wp-prev-next ul {
     }
 }
 
+
+/*********************
+TWITTER WIDGET
+*********************/
+
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -554,7 +565,7 @@ COMMENT STYLES
 
 /* h3 comment title */
 #comments {
-
+	text-align: center;
 	/* number of comments span */
 	span {}
 
@@ -577,7 +588,7 @@ COMMENT STYLES
 
 
 .commentlist {
-
+	margin: 1rem !important;
 	li {
 		position: relative;
 		clear: both;
@@ -621,7 +632,7 @@ COMMENT STYLES
 		margin-left: 10px;
 		margin-top: 0;
 		padding-bottom: 0;
-		background: $secondary-color;
+		background: #fff;
 	}
 
 	li.depth-2 {}
@@ -714,9 +725,8 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@include button($padding: $button-sml);
 		float: right;
-
+		padding: 1em;
 		&:hover,
 		&:focus {
 

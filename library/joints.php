@@ -145,11 +145,6 @@ function joints_scripts_and_styles() {
       // adding Simple Slider JS scripts file in the footer
     wp_enqueue_script( 'simpleslider-js', get_template_directory_uri() . '/library/js/simpleSlider.js', array( 'jquery' ), '', true );
 
-if ( is_single() || is_front_page() ) {
-       // adding Twitter JS scripts file in the footer
-    wp_enqueue_script( 'twitter-js', get_template_directory_uri() . '/library/js/twitter.js', array( 'jquery' ), '', true );
-}
-
            // adding Divas Cookies JS scripts file in the footer
     wp_enqueue_script( 'cookies-js', get_template_directory_uri() . '/library/js/cookies.js', array( 'jquery' ), '', true );
 
