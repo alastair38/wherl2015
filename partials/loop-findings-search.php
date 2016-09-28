@@ -9,7 +9,9 @@
 
  <?php $events = get_field('finding_event');
                            $date = DateTime::createFromFormat('Ymd', get_field('findings_date'));
-                   $date = ' (' . $date->format('d F Y') . ')';
+                          if($date){
+                            $date = ' (' . $date->format('d F Y') . ')';
+                          }
                                 if( $events ): ?>
 
 

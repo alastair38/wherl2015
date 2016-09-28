@@ -154,9 +154,12 @@ if ($location['lng']){
 
                   <?php endif; ?>
 
+								<?php if (!has_term( 'presentations', 'findings_categories' )) {
+									echo '<div id="policyDetails"><h5>Publication Details</h5>';
+								}?>
+
 
                <?php if (has_term( 'policy-outputs', 'findings_categories' )) {
-                            echo '<div id="policyDetails"><h5>Publication Details</h5>';
                             if( get_field('date_of_publication') ) {
                             $pubDate = DateTime::createFromFormat('Ymd', get_field('date_of_publication'));
                             echo '<p>Published on ' . $pubDate->format('d F Y') ;
@@ -170,7 +173,6 @@ if ($location['lng']){
                                  }?>
 
             <?php if (has_term( 'publications', 'findings_categories' )) {
-                            echo '<div id="pubDetails"><h5>Publication Details</h5><span>';
                             $journal = get_field('journal_name');
                             if( $journal ) {
                             echo '<em> ' . $journal . '</em>.';
