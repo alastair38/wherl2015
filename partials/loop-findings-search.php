@@ -10,7 +10,7 @@
  <?php $events = get_field('finding_event');
                            $date = DateTime::createFromFormat('Ymd', get_field('findings_date'));
                           if($date){
-                            $date = ' (' . $date->format('d F Y') . ')';
+                            $date = ' ' . $date->format('d F Y') . '';
                           }
                                 if(!$events){
                                    echo '<p><em>This finding was published on ' . $date . '</em></p>';
