@@ -8,7 +8,7 @@ if(function_exists("register_field_group"))
 {
     	register_field_group(array (
 		'id' => 'acf_select-event',
-		'title' => 'Select Event',
+		'title' => 'Select Event and/or Date',
 		'fields' => array (
 			array (
 				'key' => 'field_55d1fd4d7525d',
@@ -34,7 +34,8 @@ if(function_exists("register_field_group"))
 			),
             array (
 				'key' => 'field_5580567789f6a',
-				'label' => 'Pick the date your finding was presented',
+				'label' => 'What is the date of your finding?',
+        'instructions' => 'This can either be the date it was presented at an Events or when it was published',
 				'name' => 'findings_date',
 				'type' => 'date_picker',
 				'date_format' => 'yymmdd',

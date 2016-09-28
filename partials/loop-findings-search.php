@@ -12,6 +12,9 @@
                           if($date){
                             $date = ' (' . $date->format('d F Y') . ')';
                           }
+                                if(!$events){
+                                   echo '<p><em>This finding was published on ' . $date . '</em></p>';
+                                }
                                 if( $events ): ?>
 
 
