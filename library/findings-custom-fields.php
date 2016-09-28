@@ -515,7 +515,7 @@ if(function_exists("register_field_group"))
 				'choices' => array (
 					'Book' => 'Book',
 					'Book Chapter' => 'Book Chapter',
-          'Briefing Paper' => 'Briefing Paper',
+          'Briefing Note' => 'Briefing Note',
 					'Edited Book' => 'Edited Book',
 					'Journal Article' => 'Journal Article',
 					'Working Paper' => 'Working Paper',
