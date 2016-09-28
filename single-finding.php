@@ -222,7 +222,9 @@ if ($location['lng']){
 
                              <?php $events = get_field('finding_event');
                             $date = DateTime::createFromFormat('Ymd', get_field('findings_date'));
-                    $date = ' (' . $date->format('d F Y') . ')';
+														if($date) {
+															$date = ' (' . $date->format('d F Y') . ')';
+														}
                                  if( $events ): ?>
 
              <ul class="findings-authors"><h5>Presented At</h5>
