@@ -59,7 +59,7 @@ $args['fields'][] = array('type' => 'search',
 $args['fields'][] = array('type' => 'submit',
                           'value' => 'Search');
 $args['fields'][] = array('type' => 'html',
-                          'value' => '<div id="reset"><a href="' . $findings_link . '">Reset</a></div>');
+                          'value' => '<div id="reset"><a href="/about/findings">Reset</a></div>');
 
 
 $my_search = new WP_Advanced_Search($args);
