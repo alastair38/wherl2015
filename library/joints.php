@@ -150,7 +150,7 @@ function joints_scripts_and_styles() {
 
 
 
-    wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+    wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
     // register foundation stylesheet
     wp_enqueue_style( 'foundation-stylesheet', get_stylesheet_directory_uri() . '/bower_components/foundation/css/foundation.min.css', array(), '', 'all' );
