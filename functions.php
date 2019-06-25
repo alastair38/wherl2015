@@ -24,7 +24,7 @@ library/joints.php
 	- adding custom fields to user profiles
 */
 require_once('library/joints.php'); // if you remove this, Joints will break
-include_once('acf/acf.php' );
+// include_once('acf/acf.php' );
 /*
 library/custom-post-type.php
 	- an example custom post type
